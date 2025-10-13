@@ -7,9 +7,9 @@ It also provides options for the clinical grouping of medical features using sta
 All of these options are customizable for the users, allowing them to generate a personalized  patient cohort. 
 The customization steps can be recorded for the reproducibility of the overall framework. 
 The pipeline produces a smooth time-series dataset by binning the sequential data into equal-length time intervals and allowing for filtering of the time-series length according to the user's preferences.
-Besides the data processing modules, our pipeline also includes two additional modules for modeling and evaluation. 
+In addition to the data processing modules, our pipeline includes two further modules for modeling and evaluation. 
 For modeling, the pipeline includes several commonly used sequential models for performing prediction tasks. 
-The evaluation module offers a series of standard methods for evaluating the performance of the created models. 
+The evaluation module provides a set of standard methods for assessing the performance of the created models. 
 This module also includes options for reporting individual and group fairness measures.
 
 **MIMIC-IV Multimodal Pipeline**
@@ -89,7 +89,7 @@ wget -r -N -c -np https://physionet.org/files/mimic4wdb/0.1.0/
 
 ---
 
-## Steps to download the MIMIC-IV dataset for the pipeline
+### Steps to download the MIMIC-IV dataset for the pipeline
 When placing all data collected from PhysioNet, store it inside the **mimiciv/** folder following this structure:
 
 ```
@@ -110,6 +110,10 @@ mimiciv/
     echo/
     wave/
 ```
+## Install all the dependencies
+In your terminal, write the following command:
+
+`pip install -r requirements.txt`
 
 ### Repository Layout
 ```
@@ -121,10 +125,6 @@ mimiciv/
 ├── mimiciv/                     # MIMIC-IV data (see Data Access)
 │   ├── 1.0/ 2.0/ 3.1/           # versioned dirs if mirrored
 │   ├── cxr/ ecg/ echo/ notes/ wave/
-├── mappings/                    # key mapping files (CSV/CSV.GZ/TXT)
-│   ├── mimic-cxr-2.0.0-metadata.csv.gz
-│   ├── ecg_record_list.csv.gz, wave_record_list.csv.gz
-│   ├── diagnoses_icd.csv.gz, ICD9_to_ICD10_mapping.txt,
 ├── utils/
 │   ├── icd_search.py
 │   ├── icd_cohort_combined_searching.py
@@ -132,7 +132,11 @@ mimiciv/
 │   ├── notes_preproc.py, mimiciv_text_sectionizer.py, notes_embedding.py
 │   ├── image_embeddings.py, ecg_signal_embedding_extraction.py
 │   ├── uom_conversion.py, outlier_removal.py, combination_util.py
-├── model/
+│   ├── mappings/                    # kept all the metadata files (CSV/CSV.GZ/TXT)
+│   ├── mimic-cxr-2.0.0-metadata.csv.gz
+│   ├── ecg_record_list.csv.gz, wave_record_list.csv.gz, echo_record_list.csv.gz
+│   ├── diagnoses_icd.csv.gz, ICD9_to_ICD10_mapping.txt
+├── model/                      # for downstreaming tasks and stores the cohorts (optional)
 │   ├── behrt_model.py, behrt_train.py, bert_notes.py
 │   ├── cxr_mortality_model_*.pkl, bert_mortality.pt
 │   └── calibrate_output.py
@@ -195,7 +199,9 @@ mimiciv/
 
 ### How to use the pipeline?
 - After downloading the repo, open **mainPipeline.ipynb**.
-- **mainPipeline.ipynb**, contains sequential code blocks to extract, preprocess, model, and train MIMIC-IV EHR data.
+- **mainPipeline.ipynb**, contains sequential code blocks to extract, preprocess, and model MIMIC-IV EHR data.
+- For specific versions and modalities, there are checkboxes, and users can select their preferred version.
+- To select customized cohorts, use the specific ICD codes or search with the specific disease name available in the MIMIC IV database.
 - Follow each code block and read the instructions given just before each code block to run the  code block.
 - Follow the exact file paths and filenames given in the instructions for each code block to run the pipeline.
 - For the evaluation module, clear instructions are provided on how to use it as a standalone module.
