@@ -210,6 +210,7 @@ In your terminal, write the following command:
 
 In your terminal, write the following command:
 `pip install MIMICEmbedding==0.1`
+[![PyPI version](https://img.shields.io/pypi/v/MIMICEmbedding.svg)](https://pypi.org/project/MIMICEmbedding/0.1/)
 ## Functions:
 - **Search:** ICD cohort search across diagnoses using both ICD-9 and 10 codes.
 - **Embeddings:** Create embeddings for MIMIC-ECG, MIMIC-Waveform, MIMIC-CXR, MIMIC-ECHO
