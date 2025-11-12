@@ -38,6 +38,7 @@ If you use the MIMIC-IV Data Pipeline, we would appreciate citations to the foll
 - [Dataset access](#Dataset-access)
 - [Steps to download MIMIC-IV dataset for the pipeline](#Steps-to-download-MIMIC-IV-dataset-for-the-pipeline)
 - [Repository Structure](#Repository-Structure)
+- [How to use the Sectionizer and Embedding packages?](#Python-pkg)
 - [How to use the pipeline?](#How-to-use-the-pipeline)
 
 
@@ -196,6 +197,22 @@ In your terminal, write the following command:
 	- **callibrate_output**
 		consists of code to calibrate model output.
 		It can also be used as a standalone module.
+### How to use the Sectionizer and Embedding packages?
+## Install pip
+In your terminal, write the following command:
+`pip install MIMICSectionizer`
+[![PyPI version](https://img.shields.io/pypi/v/MIMICSectionizer.svg)](https://pypi.org/project/MIMICSectionizer/)
+
+## Functions:
+- **Search:** ICD cohort search across diagnoses using both ICD-9 and 10 codes.
+- **Sectionize:** Discharge/Radiology notes into separate sections.
+- **Embeddings:** optional text embeddings of MIMIC-IV-Notes.
+
+In your terminal, write the following command:
+`pip install MIMICEmbedding==0.1`
+## Functions:
+- **Search:** ICD cohort search across diagnoses using both ICD-9 and 10 codes.
+- **Embeddings:** Create embeddings for MIMIC-ECG, MIMIC-Waveform, MIMIC-CXR, MIMIC-ECHO
 
 ### How to use the pipeline?
 - After downloading the repo, open **mainPipeline.ipynb**.
