@@ -38,7 +38,7 @@ If you use the MIMIC-IV Data Pipeline, we would appreciate citations to the foll
 - [Dataset access](#Dataset-access)
 - [Steps to download MIMIC-IV dataset for the pipeline](#Steps-to-download-MIMIC-IV-dataset-for-the-pipeline)
 - [Repository Structure](#Repository-Structure)
-- [How to use the Sectionizer and Embedding packages?](#Python-pkg)
+- [How to use the Sectionizer and Embedding packages?](#How-to-use-the-Sectionizer-and-Embedding-packages)
 - [How to use the pipeline?](#How-to-use-the-pipeline)
 
 
