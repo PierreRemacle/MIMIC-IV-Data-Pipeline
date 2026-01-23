@@ -35,7 +35,7 @@ Our multimodal extensions are discussed on [arXiv](https://arxiv.org/abs/2601.11
 }
 
 ```
-Our original MIMIC-IV Data Pipeline is available on [ML4H] proceedings (https://proceedings.mlr.press/v193/gupta22a/gupta22a.pdf).
+Our original MIMIC-IV Data Pipeline is available on [ML4H proceedings] (https://proceedings.mlr.press/v193/gupta22a/gupta22a.pdf).
 
 ```
 @InProceedings{gupta2022extensive,
