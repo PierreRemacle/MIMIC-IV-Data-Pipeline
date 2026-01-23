@@ -33,6 +33,22 @@ If you use the MIMIC-IV Data Pipeline, we would appreciate citations to the foll
   url = 	 {https://proceedings.mlr.press/v193/gupta22a.html}
 }
 ```
+MIMIC-IV Multimodal Pipeline is available on [arXiv](https://arxiv.org/abs/2601.11606)
+```
+@ARTICLE{Adiba2026-ac,
+  title         = "A multimodal data processing pipeline for {MIMIC-IV} dataset",
+  author        = "Adiba, Farzana Islam and Danduri, Varsha and Piya, Fahmida
+                   Liza and Abbasi, Ali and Gupta, Mehak and Beheshti,
+                   Rahmatollah",
+  month         =  jan,
+  year          =  2026,
+  copyright     = "http://creativecommons.org/licenses/by/4.0/",
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.LG",
+  eprint        = "2601.11606"
+}
+
+```
 
 ## Table of Contents:
 - [Dataset access](#Dataset-access)
