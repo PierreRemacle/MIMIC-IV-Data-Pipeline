@@ -213,6 +213,9 @@ In your terminal, write the following command:
 	- **callibrate_output**
 		consists of code to calibrate model output.
 		It can also be used as a standalone module.
+
+# MIMIC-IV Multimodal Temporal Alignment
+![MIMIC temporal](images_v2/mimic_temporal.png)
 ### How to use the Sectionizer and Embedding packages?
 ## Install pip
 In your terminal, write the following command:
