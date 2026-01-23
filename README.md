@@ -19,7 +19,7 @@ A MIMIC IV multimodal pipeline integrating multiple modalities, including struct
 
 If you use the MIMIC-IV Data Pipeline, we would appreciate citations to the following papers.
 
-Our multimodal extension is available on [arXiv](https://arxiv.org/abs/2601.11606)
+Our multimodal extensions are discussed on [arXiv](https://arxiv.org/abs/2601.11606):
 ```
 @ARTICLE{Adiba2026-ac,
   title         = "A multimodal data processing pipeline for {MIMIC-IV} dataset",
@@ -35,8 +35,9 @@ Our multimodal extension is available on [arXiv](https://arxiv.org/abs/2601.1160
 }
 
 ```
+Our original MIMIC-IV Data Pipeline is available on [ML4H] proceedings (https://proceedings.mlr.press/v193/gupta22a/gupta22a.pdf).
+
 ```
-Our original MIMIC-IV Data Pipeline is available on [ML4H](https://proceedings.mlr.press/v193/gupta22a/gupta22a.pdf).
 @InProceedings{gupta2022extensive,
   title = 	 {{An Extensive Data Processing Pipeline for MIMIC-IV}},
   author =       {Gupta, Mehak and Gallamoza, Brennan and Cutrona, Nicolas and Dhakal, Pranjal and Poulain, Raphael and Beheshti, Rahmatollah},
