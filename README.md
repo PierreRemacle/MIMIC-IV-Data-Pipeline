@@ -16,24 +16,10 @@ This module also includes options for reporting individual and group fairness me
 A MIMIC IV multimodal pipeline integrating multiple modalities, including structured data (e.g., vitals, labs, medications), unstructured data (e.g., clinical notes, radiology reports), waveforms (e.g., electrocardiogram signals), and imaging data (e.g., chest X-rays, echocardiograms). While each modality has been individually leveraged in prior research, these modalities remain disjointed in their storage and access, requiring extensive manual effort to preprocess and align them for downstream analysis. In this work, we introduce a comprehensive and customizable multimodal data processing pipeline for MIMIC-IV that systematically integrates five modalities.
 
 ##### Citing MIMIC-IV Data Pipeline:
-MIMIC-IV Data Pipeline is available on [ML4H](https://proceedings.mlr.press/v193/gupta22a/gupta22a.pdf).
-If you use the MIMIC-IV Data Pipeline, we would appreciate citations to the following paper.
 
-```
-@InProceedings{gupta2022extensive,
-  title = 	 {{An Extensive Data Processing Pipeline for MIMIC-IV}},
-  author =       {Gupta, Mehak and Gallamoza, Brennan and Cutrona, Nicolas and Dhakal, Pranjal and Poulain, Raphael and Beheshti, Rahmatollah},
-  booktitle = 	 {Proceedings of the 2nd Machine Learning for Health symposium},
-  pages = 	 {311--325},
-  year = 	 {2022},
-  volume = 	 {193},
-  series = 	 {Proceedings of Machine Learning Research},
-  month = 	 {28 Nov},
-  publisher =    {PMLR},
-  url = 	 {https://proceedings.mlr.press/v193/gupta22a.html}
-}
-```
-MIMIC-IV Multimodal Pipeline is available on [arXiv](https://arxiv.org/abs/2601.11606)
+If you use the MIMIC-IV Data Pipeline, we would appreciate citations to the following papers.
+
+Our multimodal extension is available on [arXiv](https://arxiv.org/abs/2601.11606)
 ```
 @ARTICLE{Adiba2026-ac,
   title         = "A multimodal data processing pipeline for {MIMIC-IV} dataset",
@@ -49,6 +35,22 @@ MIMIC-IV Multimodal Pipeline is available on [arXiv](https://arxiv.org/abs/2601.
 }
 
 ```
+```
+Our original MIMIC-IV Data Pipeline is available on [ML4H](https://proceedings.mlr.press/v193/gupta22a/gupta22a.pdf).
+@InProceedings{gupta2022extensive,
+  title = 	 {{An Extensive Data Processing Pipeline for MIMIC-IV}},
+  author =       {Gupta, Mehak and Gallamoza, Brennan and Cutrona, Nicolas and Dhakal, Pranjal and Poulain, Raphael and Beheshti, Rahmatollah},
+  booktitle = 	 {Proceedings of the 2nd Machine Learning for Health symposium},
+  pages = 	 {311--325},
+  year = 	 {2022},
+  volume = 	 {193},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {28 Nov},
+  publisher =    {PMLR},
+  url = 	 {https://proceedings.mlr.press/v193/gupta22a.html}
+}
+```
+
 
 ## Table of Contents:
 - [Dataset access](#Dataset-access)
