@@ -101,6 +101,12 @@ class ML_models():
                     concat_cols.extend(cols_t)
             print('train_hids',len(train_hids))
             X_train,Y_train=self.getXY(train_hids,labels,concat_cols)
+            # save X_train and Y_train for debugging
+            with open('./data/output/'+'X_train_fold_'+str(i)+'.pkl', 'wb') as fp:
+               pickle.dump(X_train, fp)
+            with open('./data/output/'+'Y_train_fold_'+str(i)+'.pkl', 'wb') as fp:
+               pickle.dump(Y_train, fp)
+            print(X_train)
             #encoding categorical
             gen_encoder = LabelEncoder()
             eth_encoder = LabelEncoder()
@@ -118,7 +124,13 @@ class ML_models():
             print(X_train.shape)
             print(Y_train.shape)
             print('test_hids',len(test_hids))
+            test_hids = list(test_hids)
             X_test,Y_test=self.getXY(test_hids,labels,concat_cols)
+            # save X_test and Y_test for debugging
+            with open('./data/output/'+'X_test_fold_'+str(i)+'.pkl', 'wb') as fp:
+               pickle.dump(X_test, fp)
+            with open('./data/output/'+'Y_test_fold_'+str(i)+'.pkl', 'wb') as fp:
+               pickle.dump(Y_test, fp)
             self.test_data=X_test.copy(deep=True)
             X_test['gender']=gen_encoder.transform(X_test['gender'])
             X_test['ethnicity']=eth_encoder.transform(X_test['ethnicity'])
@@ -182,13 +194,17 @@ class ML_models():
         y_df=pd.DataFrame()   
         features=[]
         #print(ids)
-        for sample in ids:
+        # take a random 10% subset of data
+        
+
+        for i , sample in enumerate(ids):
             if self.data_icu:
                 y=labels[labels['stay_id']==sample]['label']
             else:
                 y=labels[labels['hadm_id']==sample]['label']
             
-            #print(sample)
+            
+            print(i)
             dyn=pd.read_csv('./data/csv/'+str(sample)+'/dynamic.csv',header=[0,1])
             
             if self.concat:
