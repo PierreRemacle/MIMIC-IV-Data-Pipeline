@@ -17,3 +17,4 @@ data/output/y_test_fold_0.pkl
 data/output/y_train_fold_0.pkl
 mimiciv/
 .DS_Store
+data/output/Archive.zip
