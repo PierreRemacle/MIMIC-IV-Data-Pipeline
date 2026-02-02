@@ -4,6 +4,16 @@ scrap
 *.pyc
 *.csv.gz
 *summary*.txt
-data/
+data/csv/*
+data/behrt/*
+data/cohort/*
+data/dict/*
+data/features/*
+data/summary/*
+data/temp/*
+data/output/X_test_fold_0.pkl
+data/output/X_train_fold_0.pkl
+data/output/y_test_fold_0.pkl
+data/output/y_train_fold_0.pkl
 mimiciv/
 .DS_Store
