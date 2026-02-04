@@ -29,13 +29,13 @@ seed_all(42)
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 print(f"Using {device}")
-with open('./data/output/'+'X_train_fold_0.pkl', 'rb') as fp:
+with open('./data/output/'+'X_train_fold_0_small.pkl', 'rb') as fp:
     X_train = pickle.load(fp)
-with open('./data/output/'+'Y_train_fold_0.pkl', 'rb') as fp:
+with open('./data/output/'+'Y_train_fold_0_small.pkl', 'rb') as fp:
     Y_train = pickle.load(fp)
-with open('./data/output/'+'X_test_fold_0.pkl', 'rb') as fp:
+with open('./data/output/'+'X_test_fold_0_small.pkl', 'rb') as fp:
     X_test = pickle.load(fp)
-with open('./data/output/'+'Y_test_fold_0.pkl', 'rb') as fp:
+with open('./data/output/'+'Y_test_fold_0_small.pkl', 'rb') as fp:
     Y_test = pickle.load(fp)
 
 
@@ -53,13 +53,12 @@ X_array = X_numeric.to_numpy(dtype=np.float32)
 print("X_shape", X_array.shape, "y_len", len(y_array))
 
 
-# # Instead of from_list with a loop:
-# fds = Dataset.from_dict({
-#     "features": X_array, # Keep as numpy
-#     "label": y_array,
-# })
-# # Set format to torch so the DataLoader returns Tensors, not lists
-# fds.set_format(type="torch", columns=["features", "label"])
+fds = Dataset.from_dict({
+    "features": X_array, # Keep as numpy
+    "label": y_array,
+})
+# Set format to torch so the DataLoader returns Tensors, not lists
+fds.set_format(type="torch", columns=["features", "label"])
 
 
 class ResBlock(nn.Module):
@@ -238,7 +237,7 @@ print(f"Train No Readmission (0): {n0_tr} ({100*n0_tr/n_tr:.2f}%)", f"Validation
 
 model = FederatedResNet(input_dim=X_array.shape[1])
 
-epochs = 200
+epochs = 20
 print(f"\n Training Resnet for {epochs} epochs")
 train(model, trainl, epochs, 0.001, 0.9, 1e-4, device)
 print(" Results loss, accuracy, auroc, auprc", test(model, vall, device))
